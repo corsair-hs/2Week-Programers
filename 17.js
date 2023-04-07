@@ -47,3 +47,4 @@ for (let i = 0; i < s.length; i++) {
     }
 }
 
+// git terminal commit & push test
