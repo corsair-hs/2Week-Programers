@@ -21,5 +21,29 @@ function solution(n) {
     return answer;
 }
 
-console.log(solution(45)); // 출력: 7
-console.log(solution(125)); // 출력: 229
+function solution2(n) {
+    var answer = 0;
+    let temp = n;
+    let ternaryStr = "";
+    for (; temp / 3 !== 0; temp = Math.floor(temp / 3)) {
+      ternaryStr += temp % 3;
+    }
+  
+    let ternaryInt = Number(ternaryStr);
+  
+    // for (
+    //   let n = 0;
+    //   ternaryInt !== 0;
+    //   ternaryInt = Math.floor(ternaryInt / 10), n++
+    // ) answer += (ternaryInt % 10) * Math.pow(3, n);
+
+    for (let i = ternaryStr.length - 1; i >= 0; i--) {
+        answer += Number(ternaryStr[ternaryStr.length - 1 - i]) * Math.pow(3, i);
+    }
+  
+    return answer;
+  }
+
+console.log(solution(1));
+// console.log(solution(45)); // 출력: 7
+// console.log(solution(125)); // 출력: 229
