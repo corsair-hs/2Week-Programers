@@ -14,4 +14,14 @@ function solution(n) {
     return answer;
 }
 
+
+function solution2(n) {
+    let sqrt = Math.sqrt(n);
+    return sqrt === parseInt(sqrt) ? Math.pow(sqrt + 1, 2) : -1;
+}
+
+
 console.log(solution(121));
+console.log(solution(3));
+
+// Math.pow

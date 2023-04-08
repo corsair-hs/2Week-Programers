@@ -19,10 +19,9 @@
 
 
 
-function solution(a, b) {
+function solution2(a, b) {
     let answer = '';
     const yoil = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-
 
     const year = '2016';
     let month = String(a);
@@ -37,4 +36,74 @@ function solution(a, b) {
 }
 
 
-console.log(solution(1, 1));
+// console.log(solution(1, 1));
+let answer = null;
+const yoil = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+
+let date = new Date(`2016-01-01`);
+console.log(date.getDay());
+
+answer = yoil[date.getDay()];
+console.log(answer);
+
+
+// function solution(a, b) {
+//     let answer = null;
+//     let daySum = 0;
+
+//     switch (a) {
+//         case 1:
+//             daySum = 0;
+//             break;
+//         case 2:
+//             daySum = 31;
+//             break;
+//         case 3:
+//             daySum = 31+29;
+//             break;
+//         case 4:
+//             daySum = 31+29+31;
+//             break;
+//         case 5:
+//             daySum = 31+29+31+30;
+//             break;
+//         case 6:
+//             daySum = 31+29+31+30+31;
+//             break;
+//         case 7:
+//             daySum = 31+29+31+30+31+30;
+//             break;
+//         case 8:
+//             daySum = 31+29+31+30+31+30+31;
+//             break;
+//         case 9:
+//             daySum = 31+29+31+30+31+30+31+31;
+//             break;
+//         case 10:
+//             daySum = 31+29+31+30+31+30+31+31+30;
+//             break;
+//         case 11:
+//             daySum = 31+29+31+30+31+30+31+31+30+31;
+//             break;
+//         case 12:
+//             daySum = 31+29+31+30+31+30+31+31+30+31+30;
+//             break;
+//         default:
+//             break;
+//     }
+
+
+//     daySum += b;
+
+//     // console.log(daySum);
+
+//     const yoil = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
+
+//     answer = yoil[daySum%7]
+
+//     return answer;
+// }
+
+
+// console.log(solution(5, 24));
+// console.log(solution2(5, 24));

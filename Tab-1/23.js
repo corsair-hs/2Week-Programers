@@ -18,4 +18,20 @@ function solution(n) {
     return answer;
 }
 
+function solution3(n) {
+    var answer = [];
+    let len = String(n).length;
+    for (let i = 0; i < len; i++) {
+      // 12345 % 10 = 5
+      // 12345 / 10 = 1234
+      // 1234 % 10 = 4
+      // 123 % 10 = 3
+      // 12 % 10 = 2
+      // 1 % 10 = 1
+      answer.push(Math.floor(n % 10));
+      n /= 10;
+    }
+    return answer;
+  }
+
 console.log(solution(12345));

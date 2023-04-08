@@ -17,8 +17,28 @@ function solution(n) {
     return answer;
 }
 
+function solution2(n) {
+    var answer = 0;
+    let len = String(n).length;
+
+    // 123 % 10 => 3
+    // n / 10 => 12
+
+    for (let i = 0; i < len; i++) {
+        answer += n % 10;
+        n = Math.floor(n / 10);
+    }
+
+    return answer;
+}
+
 // 되게 쉬운 문제인줄 알았는데 하나를 간과했네
 // 매개변수 n의 type은 Number 인데, Number은 length 길이를 확인할 수 없다.
 
 console.log(solution(123));
 console.log(solution(987));
+
+
+console.time("solution1: ");
+console.log(solution3(987));
+console.timeEnd("solution1: ");

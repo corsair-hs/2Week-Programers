@@ -9,20 +9,21 @@
 [-1,0,1], [1,0,-1] -. -2
 */
 
-// function solution(a, b) {
-//     var answer = null;
-
-//     for (let i = 0; i < a.length; i++) {
-//         answer += a[i] * b[i];
-//     }
-
-//     return answer;
-// }
-
 function solution(a, b) {
+    var answer = null;
+
+    for (let i = 0; i < a.length; i++) {
+        answer += a[i] * b[i];
+    }
+
+    return answer;
+}
+
+function solution2(a, b) {
     let answer = null;
     answer = a.reduce((acc, cur, i) => acc + cur * b[i], 0);
     return answer;
 }
 
 console.log(solution([-1,0,1], [1,0,-1]));
+console.log(solution2([-1,0,1], [1,0,-1]));

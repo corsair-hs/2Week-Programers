@@ -20,31 +20,40 @@
 // NaN은 isNaN() 메서드를 통해 비교해야하고,
 // isNaN() 함수는 내부적으로 입력값을 숫자로변환하므로, 인수로 전달된 값이 문자열이나 객체일 경우 예기치 않은 겨로가를 가져올 수 있으니 Number.isNaN()을 추천함
 
-function solution(s) {
-    let answer = null;
+// function solution(s) {
+//     let answer = null;
 
-    if (s.length === 4 || s.length === 6) {
-        let b = [];
+//     if (s.length === 4 || s.length === 6) {
+//         let b = [];
 
-        for (let i = 0; i < s.length; i++) {
-            b.push(isNaN(Number(s[i])));
-        }
+//         for (let i = 0; i < s.length; i++) {
+//             b.push(isNaN(Number(s[i])));
+//         }
 
-        answer = !b.includes(true)
+//         answer = !b.includes(true)
 
-        return answer;
-    } else {
-        answer = false;
-        return answer;
-    }
-}
+//         return answer;
+//     } else {
+//         answer = false;
+//         return answer;
+//     }
+// }
 
 // 숫자인지 아닌지 확인하는 부분을 다르게 풀어보면 아래와 같다.
 
-for (let i = 0; i < s.length; i++) {
-    if (isNaN(parseInt(s[i]))) { // 하나라도 숫자가 아니면 false
-        return false;
-    }
-}
+// for (let i = 0; i < s.length; i++) {
+//     if (isNaN(parseInt(s[i]))) { // 하나라도 숫자가 아니면 false
+//         return false;
+//     }
+// }
 
 // git terminal commit & push test
+
+
+function solution(s) {
+    let answer = null;
+
+    if ()
+
+    return answer;
+}

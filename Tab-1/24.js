@@ -23,6 +23,28 @@ function solution(n) {
     return answer;
 }
 
+function solution2(n) {
+    let answer = 0;
+
+    answer = Number(String(n).split('').sort((a, b) => b - a).join(''));
+
+    return answer;
+}
+
 // 118372 -> 873211
 
-console.log(solution(118372));
+
+const startTime1 = process.hrtime();
+solution(118372);
+const endTime1 = process.hrtime(startTime1);
+console.log(`Function 1 실행 시간: ${endTime1[0]}s ${endTime1[1] / 1000000}ms`);
+
+const startTime2 = process.hrtime();
+solution2(118372);
+const endTime2 = process.hrtime(startTime2);
+console.log(`Function 2 실행 시간: ${endTime2[0]}s ${endTime2[1] / 1000000}ms`);
+
+const startTime3 = process.hrtime();
+solution3(118372);
+const endTime3 = process.hrtime(startTime3);
+console.log(`Function 3 실행 시간: ${endTime3[0]}s ${endTime3[1] / 1000000}ms`);
