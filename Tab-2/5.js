@@ -91,23 +91,19 @@ function solution2(lottos, win_nums) {
 
     // 랭킹을 나타내는 배열 선언
     const rank = [6, 6, 5, 4, 3, 2, 1]
+    //            0  1  2  3  4  5  6
 
     // lottos에서 내가 몇 개 맞췄는지 구하기
-    // - lottos 배열 filter() 순회하면서 win_nums 배열 안에 있는지 체크하여 배열로 뽑아내기
-    // - 그것의 length 구하기
-    // countMyLotto 변수에 넣기
     const countMyLotto = lottos.filter((num) => win_nums.includes(num)).length;
+    //                   [10, 20]
 
     // 내 로또 안에 0 번호 카운트
-    // - lottos배열 filter()) 순회하면서 0인 것만 배열로 뽑아내기
-    // - 그것의 length 구하기
-    // - count0 변수에 넣기
     const count0 = (lottos.filter(num => num === 0)).length;
+    //              [0, 0]
 
     // answer 배열에 2가지 넣을 건데
-    // 1. countMyLotto+count0 = index 번호를 활용해서 rank에서 가져오고
-    // 2. countMyLotto = index 번호를 활용해서 rank에서 가져와서 넣기
     answer.push(rank[countMyLotto + count0], rank[countMyLotto]);
+    //          rank[4],                     rank[2]
 
     return answer;
 }
